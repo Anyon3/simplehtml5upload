@@ -1,0 +1,26 @@
+#filesend  {
+display:block;
+position:relative;
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.filezone  {
+height:150px; /* Set your initial height */
+width:150px; /* Set your initial width */
+/*
+ * Following optional, when the image will appear, you may want the resize of container for fit with it
+ max-height:400px;
+ max-width:400px;
+ */
+border:1px dotted black;
+display:block;
+margin:0 ;
+}
+.filezone img {
+max-width:100%;
+height:auto;
+margin:0 auto;
+}
+#fileup, #reset {
+margin:20px 0 0 0;
+}
