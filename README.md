@@ -2,7 +2,13 @@
 
 A html5/jQuery lightweight form upload for images.
 
-Preview, drop zone and description of the file features are available
+Features 
+--------
+
+- Preview of the image (also -> Mime type, size, height, width displayed)
+- Drop zone 
+- Size control
+- Height and width control
 
 # How to
 
