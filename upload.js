@@ -49,7 +49,7 @@ $(':file').change(function(e) {
 
         //Make new Image for get the width / height
     	var image = new Image();
-		image.src = filer.result;
+      	image.src = filer.result;
 
 			image.onload = function() {
 
@@ -110,7 +110,7 @@ $(document).on('click', '#reset',  function(e) {
 
 	//Remove the lock of the input file
 	if(filesend.hasClass('lock'))
-		filesend.removeClass();
+		filesend.css('height','100%');.removeClass();
 
 	//Set default  reset value
 	$(this).val('Clear');
