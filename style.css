@@ -14,7 +14,8 @@ width:150px; /* Set your initial width */
  */
 border:1px dotted black;
 display:block;
-margin:0 ;
+margin:0;
+cursor:pointer;
 }
 .filezone img {
 max-width:100%;
