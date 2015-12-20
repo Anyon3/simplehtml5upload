@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple html5 upload</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<form enctype="multipart/form-data" method="post" name="fileinfo" id=fileinfo>
+	<label for=filesend class=filezone>
+		<img src="" alt="" class="ish">
+		<input id=filesend type="file" name="file">
+	</label>
+<input type="button" id=reset class=ish value="Clear">
+<input type="submit" id=fileup class=ish value="Upload">
+</form>
+<p class=msgUp>Drop your image !</p>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="upload.js"></script>
+</body>
+</html>
