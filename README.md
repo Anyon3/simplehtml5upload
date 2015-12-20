@@ -2,7 +2,7 @@
 
 A html5/jQuery lightweight form upload for images.
 
-Preview and description of the file features are available
+Preview, drop zone and description of the file features are available
 
 # How to
 
