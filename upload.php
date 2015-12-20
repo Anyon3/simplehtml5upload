@@ -31,7 +31,7 @@
     $newn = mb_substr(md5(microtime()), 0, 25);
 
     //Move the file to the final directory, from the temp directory
-    move_uploaded_file($tmpn, dirname(__FILE__) . "/../cache/temp/$newn.$ext");
+    move_uploaded_file($tmpn, dirname(__FILE__) . "/path/to//$newn.$ext");
 
     echo "$newn.$ext";
 
