@@ -148,7 +148,7 @@ $(document).on('click', '#fileup', function(e) {
     		if(msg === 'err')
     			msgUp.text('Something went wrong, try again.'); //That should happen !
     		else
-    			msgUp.text('Success, your file is available '+ msg);  //Add the path of your file except the filename generated
+    			msgUp.text('Success, your file is available '+ msg);  //Add the url of your file except the filename generated
 
     }); //End ajax
 
