@@ -15,9 +15,12 @@ upload.js
 ---------
 Line 48 :
 
-actype = The mime type that you want to allow, just add / remove the value wanted 
+actype = The mime type that you want to allow, just add / remove the value wanted
+
 maxweight = The weight of the file maximum, value in octet
+
 maxwidth = 150; maximum width of the image
+
 maxheight = 150; maximum height of the image
 
 Line 134 : Set the path to the php script
