@@ -30,6 +30,10 @@ Line 134 : Set the path to the php script
 upload.php
 ----------
 
+Line 12 :
+
+Add / remove mime type wanted
+
 Line 15 :
 
 Add the max weight wanted
