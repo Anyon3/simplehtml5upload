@@ -131,7 +131,7 @@ $(document).on('click', '#fileup', function(e) {
 	var filesfm = new FormData(document.querySelector("form"));
 
     $.ajax({
-        url: 'php/test123nn.php',  //Server side script (php...)
+        url: 'upload.php',  //Server side script (php...)
         type: 'POST',
         data:filesfm,
         processData: false,  //Avoid jquery process
