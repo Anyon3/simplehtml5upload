@@ -36,7 +36,11 @@ Add / remove mime type wanted
 
 Line 15 :
 
-Add the max weight wanted
+Add the max weight 
+
+Line 18 :
+
+Add extention file (shall match with mime type)
 
 Line 34 :
 
