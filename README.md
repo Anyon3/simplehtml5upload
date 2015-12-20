@@ -20,9 +20,9 @@ maxweight = The weight of the file maximum, value in octet
 maxwidth = 150; maximum width of the image
 maxheight = 150; maximum height of the image
 
-Line 181 : Set the path to the php script
+Line 134 : Set the path to the php script
 
-198 : Message success upload of server side, you may want add your url before the the filename
+152 : Success message upload of server side, you may want add your url before the the filename
 
 upload.php
 ----------
