@@ -5,6 +5,7 @@ opacity: 0;
 filter: alpha(opacity=0);
 width:100%;
 height:100%;
+cursor:pointer;
 }
 .filezone  {
 height:150px; /* Set your initial height */
@@ -17,7 +18,6 @@ width:150px; /* Set your initial width */
 border:1px dotted black;
 display:block;
 margin:0;
-cursor:pointer;
 }
 .filezone img {
 max-width:100%;
