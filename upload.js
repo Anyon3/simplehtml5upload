@@ -72,7 +72,7 @@ $(':file').change(function(e) {
 				//Success of every check, display infos about the image and show up the <img> tag
 				msgUp.html('Size :'+ aSize +' bytes<br>Filetype : '+ aType +'<br>Width :'+ aWidth +' px<br>Height: '+ aHeight +' px');
 				ish.show();
-				filesend.addClass('lock');
+				filesend.addClass('lock').css('height','0%');
 
 			//End image
 			};
