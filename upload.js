@@ -24,9 +24,9 @@ $(':file').change(function(e) {
 	//Full file
 	file = this.files[0];
 
-    var filer = new FileReader;
+	var filer = new FileReader;
 
-    filer.onload = function() {
+	filer.onload = function() {
 
     	//Get size and type
     	var aType = file.type;
@@ -51,38 +51,38 @@ $(':file').change(function(e) {
     	var image = new Image();
       	image.src = filer.result;
 
-			image.onload = function() {
+		image.onload = function() {
 
-				//Get width / height
-				aWidth  = image.width;
-				aHeight = image.height;
+		//Set width / height
+		aWidth  = image.width;
+		aHeight = image.height;
+		
+		//Check width
+		if(aWidth > maxwidth) {
+			msgUp.text('Maximum' + maxwidth +' width allowed');
+	        	return;
+		}
 
-				//Check width
-				if(aWidth > maxwidth) {
-					msgUp.text('Maximum' + maxwidth +' width allowed');
-	        		return;
-				}
+		//Check height
+		if(aHeight > maxheight) {
+			msgUp.text('Maximum' + maxheight +' height allowed');
+	        	return;
+			
+		}
 
-				//Check height
-				if(aHeight > maxheight) {
-					msgUp.text('Maximum' + maxheight +' height allowed');
-	        		return;
-				}
+		//Success of every check, display infos about the image and show up the <img> tag
+		msgUp.html('Size :'+ aSize +' bytes<br>Filetype : '+ aType +'<br>Width :'+ aWidth +' px<br>Height: '+ aHeight +' px');
+			ish.show();
+			filesend.addClass('lock').css('height','0%');
 
-				//Success of every check, display infos about the image and show up the <img> tag
-				msgUp.html('Size :'+ aSize +' bytes<br>Filetype : '+ aType +'<br>Width :'+ aWidth +' px<br>Height: '+ aHeight +' px');
-				ish.show();
-				filesend.addClass('lock').css('height','0%');
-
-			//End image
-			};
+		//End image
+		};
 
 	//End filer
-    };
+    	};
 
     //File is up
     filer.readAsDataURL(file);
-
 });
 
 //input file prevent on lock
@@ -110,14 +110,13 @@ $(document).on('click', '#reset',  function(e) {
 
 	//Remove the lock of the input file
 	if(filesend.hasClass('lock'))
-		filesend.css('height','100%');.removeClass();
+		filesend.css('height','100%').removeClass();
 
 	//Set default  reset value
 	$(this).val('Clear');
 
 	//Back to hide
 	ish.hide();
-
 });
 
 //On fileup
@@ -130,13 +129,13 @@ $(document).on('click', '#fileup', function(e) {
 	//Set variable which contain the entiere form / field
 	var filesfm = new FormData(document.querySelector("form"));
 
-    $.ajax({
+	$.ajax({
         url: 'upload.php',  //Server side script (php...)
         type: 'POST',
         data:filesfm,
         processData: false,  //Avoid jquery process
         contentType: false   //Avoid set content type (done by var filesfm)
-    		}).done(function(msg) {
+    	}).done(function(msg) {
 
     		//Hide the button upload
     		fileup.hide();
@@ -146,10 +145,10 @@ $(document).on('click', '#fileup', function(e) {
 
     		//On success upload
     		if(msg === 'err')
-    			msgUp.text('Something went wrong, try again.'); //That should happen !
+    			msgUp.text('Something went wrong, try again.'); //That should not happen !
     		else
     			msgUp.text('Success, your file is available '+ msg);  //Add the url of your file except the filename generated
 
-    }); //End ajax
+	}); 
 
 });
