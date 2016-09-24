@@ -16,22 +16,17 @@
         exit('err');
 
     //Set extention
-    if($type === 'image/png')
-        $ext = "png";
-    elseif($type === 'image/jpeg')
-        $ext = 'jpeg';
-    elseif($type === 'image/jpg')
-        $ext = 'jpg';
-        elseif($type === 'image/gif')
-        $ext = 'gif';
-    else
-       exit('err');
+    if($type === 'image/png') $ext = "png";
+    elseif($type === 'image/jpeg') $ext = 'jpeg';
+    elseif($type === 'image/jpg') $ext = 'jpg';
+    elseif($type === 'image/gif') $ext = 'gif';
+    else exit('err');
 
     //Set a random filename
     $newn = mb_substr(md5(microtime()), 0, 25);
 
     //Move the file to the final directory, from the temp directory
-    move_uploaded_file($tmpn, dirname(__FILE__) . "/path/to/$newn.$ext");
+    move_uploaded_file($tmpn,__DIR__."/path/to/$newn.$ext");
 
     echo "$newn.$ext";
 
